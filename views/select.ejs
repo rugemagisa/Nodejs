@@ -1,0 +1,29 @@
+<h1>Liste des annonces</h1>
+
+<a href="/form">Ajouter Une annonce</a>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<table>
+    <tr>
+        <td>IdAnnonce</td>
+        <td>Description</td>
+        <td>Prix</td>
+        <td>Telephone</td>
+        <td>Mail</td>
+        <td>Adresse</td>
+    </tr>
+    <% annonce.forEach(function(item){ %>
+    <tr>
+        <td><%= item.IdAnnonce %></td>
+        <td><%= item.Description %></td>
+        <td><%= item.Prix%></td>
+        <td><%= item.Telephone %></td>
+        <td><%= item.Mail %></td>
+        <td><%= item.Adresse %></td>
+        <td>
+            <a href="/delete?id=<%= item.IdAnnonce %>" onclick="return comfirm('are you sure ?')">Delete</a>
+            <a href="/edit?id=<%=  item.IdAnnonce %>">Edit</a>
+        </td>
+    </tr>
+    <% }); %>
+</table>

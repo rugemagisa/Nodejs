@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<form method="post">
+    <div>IdAnnonce = <input name = "IdAnnonce" value="<%= annonce.IdAnnonce%>" /></div>
+    <div>Categorie = <input name="IdCategorie" value="<%= annonce.IdCategorie%>"/></div>
+    <div>Description = <input name="Description" value="<%= annonce.Description%>"/></div>
+    <div>Prix = <input name="Prix" value="<%= annonce.Prix%>"/></div>
+    <div>Telephone = <input name="Telephone" value="<%= annonce.Telephone%>"/></div>
+    <div>Mail = <input name="Mail" value="<%= annonce.Mail%>"/></div>
+    <div>Adresse = <input name="Adresse" value="<%= annonce.Adresse%>"/></div>
+    <button>Save</button>
+    <input type="hidden" value =" <%= annonce.id %>" />
+</form>
